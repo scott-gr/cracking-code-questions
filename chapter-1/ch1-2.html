@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Check if one string is a permutation of another
+    const perm = (strA, strB) => {
+      let arrA = Array.from(strA).sort()
+      let arrB = Array.from(strB).sort()
+      // Clearly false if different lengths
+      if (arrA.length != arrB.length) {
+        alert('false')
+      }
+      // Indexes should be matching after .sort() method, so check if any are not 
+      for (let i = 0; i < arrA.length; i++) {
+        if (arrA[i] != arrB[i]) {
+          alert('false')
+        }
+      }
+      alert('true');
+
+    }
+
+
+  </script>
+  <button onclick="perm('geo', 'gef')">Click</button>
+
+</body>
+
+</html>
